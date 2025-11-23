@@ -1,0 +1,42 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.footer {
+  background: linear-gradient(180deg, transparent 0%, rgba(26, 11, 46, 0.6) 100%);
+  border-top: 1px solid rgba(124, 58, 237, 0.2);
+  padding: 3rem 0;
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gradient-purple);
+  opacity: 0.5;
+}
+
+.footer-text {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  animation: fadeIn 1s ease;
+  transition: all var(--transition-base);
+}
+
+.footer-text:hover {
+  color: var(--color-text-primary);
+  transform: scale(1.02);
+}
