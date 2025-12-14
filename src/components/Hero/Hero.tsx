@@ -38,16 +38,16 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className="floating-card card-1">
-                            <div className="card-icon">📱</div>
-                            <div className="card-text">Android</div>
+                            <div className="card-icon">🏗️</div>
+                            <div className="card-text">REVIT</div>
                         </div>
                         <div className="floating-card card-2">
-                            <div className="card-icon">🎨</div>
-                            <div className="card-text">Jetpack</div>
+                            <div className="card-icon">❄️</div>
+                            <div className="card-text">HVAC</div>
                         </div>
                         <div className="floating-card card-3">
-                            <div className="card-icon">⚡</div>
-                            <div className="card-text">Kotlin</div>
+                            <div className="card-icon">🔧</div>
+                            <div className="card-text">BIM</div>
                         </div>
                         <div className="hero-circle"></div>
                     </div>

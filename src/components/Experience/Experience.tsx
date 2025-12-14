@@ -4,6 +4,17 @@ import type { Project } from '../../types';
 import './Experience.css';
 
 /**
+ * Helper function to properly encode file paths
+ * Encodes each path segment separately to handle spaces and special characters
+ */
+const encodeFilePath = (path: string): string => {
+    return path
+        .split('/')
+        .map(segment => encodeURIComponent(segment))
+        .join('/');
+};
+
+/**
  * Project card component
  */
 interface ProjectCardProps extends Project {
@@ -17,20 +28,43 @@ const ProjectCard = ({
     highlights,
     demoUrl,
     githubUrl,
+    pdfUrl,
     index
 }: ProjectCardProps) => {
     const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
+    const handleCardClick = () => {
+        if (pdfUrl) {
+            window.open(encodeFilePath(pdfUrl), '_blank');
+        }
+    };
 
     return (
         <div
             ref={elementRef}
             className={`project-card glass-card scroll-fade-up ${isVisible ? 'visible' : ''}`}
-            style={{ transitionDelay: `${index * 0.1}s` }}
+            style={{ 
+                transitionDelay: `${index * 0.1}s`,
+                cursor: pdfUrl ? 'pointer' : 'default'
+            }}
+            onClick={handleCardClick}
         >
             <div className="project-header">
                 <h3 className="project-title">{title}</h3>
-                {(demoUrl || githubUrl) && (
+                {(demoUrl || githubUrl || pdfUrl) && (
                     <div className="project-links">
+                        {pdfUrl && (
+                            <a
+                                href={encodeFilePath(pdfUrl)}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="project-link"
+                                aria-label={`View ${title} PDF`}
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                📄
+                            </a>
+                        )}
                         {demoUrl && (
                             <a
                                 href={demoUrl}
@@ -38,6 +72,7 @@ const ProjectCard = ({
                                 rel="noopener noreferrer"
                                 className="project-link"
                                 aria-label={`View ${title} demo`}
+                                onClick={(e) => e.stopPropagation()}
                             >
                                 🔗
                             </a>
@@ -49,6 +84,7 @@ const ProjectCard = ({
                                 rel="noopener noreferrer"
                                 className="project-link"
                                 aria-label={`View ${title} on GitHub`}
+                                onClick={(e) => e.stopPropagation()}
                             >
                                 💻
                             </a>

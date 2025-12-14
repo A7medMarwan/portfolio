@@ -2,107 +2,119 @@ import type { PersonalInfo, Project, SkillCategory, ContactInfo } from '../types
 
 // Personal Information
 export const personalInfo: PersonalInfo = {
-    name: 'Abdelrahman Elgendy',
-    title: 'Android Software Engineer',
-    subtitle: 'Crafting exceptional mobile experiences with modern Android technologies',
+    name: 'Ahmed Ata',
+    title: 'Mechanical Power Engineer',
+    subtitle: 'Specializing in MEP Systems Design, BIM Modeling, and Project Management',
     bio: [
-        "I'm a passionate Android Software Engineer with expertise in building high-performance, scalable mobile applications. I specialize in creating elegant solutions that deliver seamless user experiences and solve complex technical challenges.",
-        "With a strong foundation in Kotlin, Java, and modern Android development practices, I bring both technical excellence and creative problem-solving to every project. I'm committed to writing clean, maintainable code and staying current with the latest Android innovations."
+        "A highly motivated Mechanical Power Engineer, Class of 2024, graduating with Very Good with Honors. Equipped with strong academic and practical knowledge in mechanical systems design, plumbing works, and construction-related engineering.",
+        "Seeking an engineering position where I can apply BIM methodologies, project management principles, and professional skills gained from international training programs. Aspiring to join a dynamic engineering team where I can contribute effectively, grow professionally, and become a valuable asset in the mechanical engineering field."
     ],
     statistics: [
-        { id: 'experience', number: '3+', label: 'Years Experience' },
-        { id: 'projects', number: '20+', label: 'Apps Developed' },
-        { id: 'satisfaction', number: '100%', label: 'Code Quality' }
+        { id: 'education', number: '2024', label: 'Graduation Year' },
+        { id: 'certifications', number: '5+', label: 'Certifications' },
+        { id: 'internships', number: '3+', label: 'Training Programs' }
     ],
     socialLinks: [
-        { platform: 'GitHub', url: 'https://github.com/Abdelrahman-El-Gendy', icon: '💻' },
-        { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/abdulrahmanelgendy/', icon: '💼' },
-        { platform: 'Twitter', url: 'https://twitter.com/abdelrahman_dev', icon: '🐦' }
+        { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/ahmed-ata-cr7/', icon: '💼' }
     ]
 };
 
 // Skills Data
 export const skillsData: SkillCategory[] = [
     {
-        id: 'android',
-        title: 'Android Development',
-        icon: '📱',
-        skills: ['Kotlin', 'Java', 'Jetpack Compose', 'XML Layouts', 'Material Design', 'MVVM']
-    },
-    {
-        id: 'architecture',
-        title: 'Architecture & Patterns',
+        id: 'bim-software',
+        title: 'BIM Software',
         icon: '🏗️',
-        skills: ['Clean Architecture', 'MVI', 'MVVM', 'Repository Pattern', 'Dependency Injection', 'Hilt/Dagger']
+        skills: ['REVIT', 'BIM 360', 'REVIT work-sharing', 'Navisworks', 'Dynamo']
     },
     {
-        id: 'libraries',
-        title: 'Libraries & Frameworks',
-        icon: '📚',
-        skills: ['Retrofit', 'Room', 'Coroutines', 'Flow', 'LiveData', 'Navigation Component']
+        id: 'design-tools',
+        title: 'Design & Modeling Tools',
+        icon: '📐',
+        skills: ['AUTOCAD', 'Enscape', 'Elite', 'Duct Sizer', 'Pipe sizer']
     },
     {
-        id: 'backend',
-        title: 'Backend & APIs',
+        id: 'engineering-software',
+        title: 'Engineering Software',
         icon: '⚙️',
-        skills: ['REST APIs', 'GraphQL', 'Firebase', 'Ktor', 'WebSocket', 'JSON/XML']
+        skills: ['HAP', 'ASHRAE Fitting database']
     },
     {
-        id: 'tools',
-        title: 'Tools & Testing',
-        icon: '🛠️',
-        skills: ['Android Studio', 'Git', 'JUnit', 'Espresso', 'Mockito', 'Gradle']
+        id: 'mep-systems',
+        title: 'MEP Systems',
+        icon: '🔧',
+        skills: ['HVAC', 'Firefighting', 'Plumbing', 'Medical Gases Systems']
+    },
+    {
+        id: 'standards',
+        title: 'Codes & Standards',
+        icon: '📋',
+        skills: ['ASHRAE', 'NFPA', 'IPC', 'SMACNA', 'HTM']
     },
     {
         id: 'soft-skills',
-        title: 'Soft Skills',
+        title: 'Professional Skills',
         icon: '🤝',
-        skills: ['Problem Solving', 'Team Collaboration', 'Code Review', 'Agile/Scrum', 'Mentoring']
+        skills: ['Project Management', 'Communication', 'Time Management', 'Problem-solving', 'Leadership', 'Teamwork']
     }
 ];
 
 // Projects Data
 export const projectsData: Project[] = [
     {
-        id: 'ecommerce-app',
-        title: 'E-Commerce Android App',
-        description: 'Built a feature-rich e-commerce application with product catalog, shopping cart, payment integration, and order tracking using modern Android architecture.',
-        technologies: ['Kotlin', 'Jetpack Compose', 'Room', 'Retrofit', 'Hilt'],
-        highlights: ['50k+ downloads', 'Material Design 3', 'Offline-first architecture'],
-        demoUrl: 'https://play.google.com/store/apps/details?id=com.example.shop',
-        githubUrl: 'https://github.com/abdelrahmanelgendy/ecommerce-app'
+        id: 'hvac-system-tanta',
+        title: 'HVAC System - Tanta',
+        description: 'Complete HVAC system design for a 3-floor building located in Tanta with a total area of 1500 m². Comprehensive heating, ventilation, and air conditioning system design following industry standards.',
+        technologies: ['REVIT', 'HAP', 'Duct Sizer', 'Pipe Sizer', 'Excel (ESP, BOQ)'],
+        highlights: ['1500 m² area', '3-floor building', 'Complete HVAC design', 'BOQ calculations'],
+        pdfUrl: '/projects/hvac_system_tanta/HVAC system.pdf'
     },
     {
-        id: 'fitness-tracker',
-        title: 'Fitness Tracking App',
-        description: 'Developed a comprehensive fitness tracking application with workout logging, progress analytics, and social features using Jetpack Compose.',
-        technologies: ['Kotlin', 'Jetpack Compose', 'Firebase', 'Coroutines', 'Flow'],
-        highlights: ['Real-time sync', 'Custom charts', '4.7 star rating'],
-        demoUrl: 'https://play.google.com/store/apps/details?id=com.example.fitness',
-        githubUrl: 'https://github.com/abdelrahmanelgendy/fitness-tracker'
+        id: 'hvac-system-cairo-1',
+        title: 'HVAC System - Cairo',
+        description: 'Comprehensive HVAC system design for a 3-floor commercial building located in Cairo with a total area of 3000 m². Full system design including load calculations, ductwork, and piping design.',
+        technologies: ['REVIT', 'HAP', 'Duct Sizer', 'Pipe Sizer', 'Excel (ESP, BOQ)'],
+        highlights: ['3000 m² area', '3-floor building', 'Commercial HVAC design', 'Complete system documentation'],
+        pdfUrl: '/projects/hvac_system_cairo1/HVAC System cairo.pdf'
     },
     {
-        id: 'news-reader',
-        title: 'News Reader App',
-        description: 'Created a modern news reading application with personalized feeds, offline reading, and beautiful UI using Material Design principles.',
-        technologies: ['Kotlin', 'MVVM', 'Room', 'Retrofit', 'Glide'],
-        highlights: ['Offline reading', 'Push notifications', 'Multi-language support'],
-        githubUrl: 'https://github.com/abdelrahmanelgendy/news-reader'
+        id: 'hvac-system-cairo-2',
+        title: 'HVAC System - Cairo',
+        description: 'HVAC system design for a single-floor building located in Cairo with a total area of 2150 m². Complete heating, ventilation, and air conditioning system design with detailed calculations.',
+        technologies: ['AUTOCAD', 'HAP', 'Duct Sizer', 'Pipe Sizer', 'Excel (ESP, BOQ)'],
+        highlights: ['2150 m² area', 'Single-floor design', 'HVAC system design', 'Detailed calculations'],
+        pdfUrl: '/projects/hvac_system_cairo2/hvac system cairo 2.pdf'
     },
     {
-        id: 'chat-app',
-        title: 'Real-Time Chat Application',
-        description: 'Built a real-time messaging application with end-to-end encryption, media sharing, and group chat functionality.',
-        technologies: ['Kotlin', 'Firebase', 'WebSocket', 'CameraX', 'ExoPlayer'],
-        highlights: ['E2E encryption', 'Voice messages', 'Video calls'],
-        demoUrl: 'https://play.google.com/store/apps/details?id=com.example.chat',
-        githubUrl: 'https://github.com/abdelrahmanelgendy/chat-app'
+        id: 'domestic-water-drainage',
+        title: 'Domestic Water & Drainage System',
+        description: 'Complete domestic water supply and drainage system design for a single-floor building in Cairo with a total area of 2150 m². Comprehensive plumbing system including water distribution and wastewater management.',
+        technologies: ['AUTOCAD', 'Pipe Sizer', 'Excel (ESP, BOQ)'],
+        highlights: ['2150 m² area', 'Water supply system', 'Drainage system design', 'BOQ documentation'],
+        pdfUrl: '/projects/domestic_water&drainage/DOMESTIC water & Drainage.pdf'
+    },
+    {
+        id: 'medical-gas-system',
+        title: 'Medical Gas System',
+        description: 'Medical gas system design for a healthcare facility in Cairo with a total area of 2150 m². Complete medical gas distribution system including oxygen, medical air, and vacuum systems following HTM standards.',
+        technologies: ['AUTOCAD', 'Pipe Sizer', 'Excel (ESP, BOQ)'],
+        highlights: ['2150 m² area', 'Medical gas distribution', 'HTM compliant', 'Healthcare facility design'],
+        pdfUrl: '/projects/medical_gas_system/medical gas system.pdf'
+    },
+    {
+        id: 'sprinkler-hose-cabinet',
+        title: 'Sprinkler & Hose Cabinet System',
+        description: 'Fire protection system design including automatic sprinkler system and hose cabinet system for a building in Cairo with a total area of 2150 m². Complete firefighting system following NFPA standards.',
+        technologies: ['AUTOCAD', 'Pipe Sizer', 'Excel (ESP, BOQ)'],
+        highlights: ['2150 m² area', 'Sprinkler system', 'Hose cabinet system', 'NFPA compliant'],
+        pdfUrl: '/projects/sprinkler_hose_cabinet_system/sprinkler & hose cabinet system.pdf'
     }
 ];
 
 // Contact Information
 export const contactInfo: ContactInfo[] = [
-    { icon: '📧', label: 'Email', value: 'abdelrahmanelgendy961@gmail.com', link: 'mailto:abdelrahmanelgendy961@gmail.com' },
-    { icon: '💼', label: 'LinkedIn', value: 'linkedin.com/in/abdulrahmanelgendy', link: 'https://www.linkedin.com/in/abdulrahmanelgendy/' },
-    { icon: '💻', label: 'GitHub', value: 'github.com/Abdelrahman-El-Gendy', link: 'https://github.com/Abdelrahman-El-Gendy' }
+    { icon: '📧', label: 'Email', value: 'ataahmed937@gmail.com', link: 'mailto:ataahmed937@gmail.com' },
+    { icon: '📱', label: 'Phone', value: '01008881304', link: 'tel:+201008881304' },
+    { icon: '💼', label: 'LinkedIn', value: 'LinkedIn Profile', link: 'https://www.linkedin.com/in/ahmed-ata-cr7' },
+    { icon: '📍', label: 'Location', value: 'Tanta, Gharbia, Egypt', link: undefined }
 ];

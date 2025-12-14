@@ -8,6 +8,7 @@ export interface Project {
     highlights: string[];
     demoUrl?: string;
     githubUrl?: string;
+    pdfUrl?: string;
 }
 
 export interface SkillCategory {
